@@ -1,0 +1,262 @@
+/* CSS reset*/
+/* in this css reset we set the margins to 0 and other default stuffs */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Prosto One', cursive;
+}
+html{
+    scroll-behavior: smooth scroll;
+}
+
+/*CSS Variables 
+:root{
+    --navbar-height: 60px;
+}*/
+/* Navigation bar*/
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar:before {
+    content: " ";
+    /*content is must otherrwise before and after won't work */
+    background-color: rgb(46, 45, 45);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* Nav Bar:Logo and Image */
+#logo {
+    margin: 0px 0px;
+}
+
+#logo img {
+    height: 70px;
+    margin: 15px 30px;
+}
+
+/* Nav Bar: list styling */
+#navbar ul {
+    display: flex;
+    /*responsible for bringing the list in a straight line*/
+
+}
+
+#navbar ul li {
+    list-style: none;
+    /* remove the dots in the start of the list*/
+    font-size: 1.5rem;
+    
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    /*border: 2px solid black; */
+    border-radius: 20px;
+    font-size: 1.2rem;
+    padding: 10px;
+    /* reason for giving padding here in video at 15:58 (important)*/
+    margin: 9px 10px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+#navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    ;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height:70vh;
+    /* if we add custom height manually then we can get the height we desired for, if we don't get the complete image as background */
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    color: rgb(238, 231, 231);
+}
+
+#home:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*by this the home back image moved to top 0 and the navbar also moved on to the topmost and leftmost position of the site which looks cool*/
+    background: url('external/cssimges/food2.jpg')no-repeat center center/cover;
+    /* ../ can be used as style.css is in case of two folder outside hierarchial level*/
+    height: 80%;
+    width: 100%;
+    z-index: -3;
+    opacity: 0.8;
+}
+
+/*Services Section*/
+
+#services {
+    display: flex;
+
+}
+
+#services .box {
+    margin: 15px 15px 20px;
+    border: 2px solid rgb(216, 11, 11);
+    border-radius: 23px;
+    background-color: rgb(203, 219, 221);
+    padding: 10px;
+}
+
+#services .box img {
+    height: 100px;
+    margin: 15px auto;
+    display: block !important;
+
+
+}
+
+#services p {
+    color: black;
+}
+
+/* Client Section*/
+#client-section {
+    position: relative;
+    /* height: 400px; so that while making it responsive it can change its height manually */
+    
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url('external/cssimges/food1.jpg')no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    opacity: 0.6;
+}
+
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#clients img {
+    height: 140px;
+    
+}
+
+.client-items {
+    padding: 35px;
+    position: relative;
+    z-index: -2;
+    
+}
+
+/*Contact Section*/
+#contact {
+    margin-top: 20px;
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    opacity: 0.9;
+    background: url('external/cssimges/contact-us-gb5a58c368_1920.jpg')no-repeat center center/cover;
+}
+
+#contactbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+
+#contactbox label {
+    font-size: 1.2rem;
+}
+
+#contactbox input,
+#contactbox textarea {
+    border: 2px solid green;
+    border-radius: 8px;
+    font-size: 0.9em;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#contactbox form {
+    width: 40%;
+
+}
+
+footer {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/*Utility Clases*/
+.h-prime {
+    font-size: 3rem;
+    /* color: rgb(238, 231, 231); */
+    padding: 15px;
+    position: relative;
+    z-index: -2;
+
+}
+
+.h-second {
+    font-size: 2.5rem;
+    padding: 5px;
+}
+
+.center {
+    /* font-size: 2.5rem; */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(238, 231, 231);
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(160, 21, 21);
+    color: rgb(238, 231, 231);
+    border: 2px solid rgb(235, 213, 213);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: rgb(207, 174, 174);
+    background-color: rgb(218, 8, 8);
+    text-decoration: underline;
+    border-radius: 8px;
+}
